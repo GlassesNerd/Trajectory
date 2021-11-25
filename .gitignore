@@ -3,7 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-yeet.asy
+# Output files
+*.asy
 
 # User-specific files
 *.rsuser
