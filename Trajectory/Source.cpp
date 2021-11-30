@@ -5,11 +5,16 @@
 #include <fstream>
 #include <iomanip>
 #include <algorithm>
+#include <string>
 # define PI 3.14159265358979323846
 # define g 9.80665
 using namespace std;
 int main() {
-	ofstream fout("yeet.asy");
+	string filename;
+	cout << "output file name: ";
+	cin >> filename;
+	if (filename.substr(filename.size() - 4, 4) != ".asy") filename.append(".asy");
+	ofstream fout(filename);
 	const double precision = 256, airDensity = 1.2;
 	long double vInit, mass, angle, dragCoeff, crossArea;
 	cout << "Initial velocity of projectile: ";
